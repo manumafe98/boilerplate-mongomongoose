@@ -13,8 +13,9 @@ const personSchema = new Schema({
 
 let Person = mongoose.model('Person', personSchema);
 
+//Create and Save a Record of a Model
 const createAndSavePerson = (done) => {
-  let alextiger = new Person({name: 'alex', age: 20, favoriteFoods: ['pizza', 'pasta']})
+  let alextiger = new Person({name: 'Alex Tiger', age: 20, favoriteFoods: ['pizza', 'pasta']})
   alextiger.save(function(err, data){
     if (err) return console.error(err)
     done(null, data)
